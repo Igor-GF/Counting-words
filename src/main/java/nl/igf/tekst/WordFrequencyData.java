@@ -16,25 +16,25 @@ public class WordFrequencyData implements WordFrequencyAnalyzer {
 
     @Override
     public int calculateFrequencyForWord(String tekst, String woord) {
-        ArrayList<String> woorden = createListFromText(tekst);
-        return Collections.frequency(woorden, woord);
+        setFrequencyList(tekst);
+
+//        lijst.
+        return 1;
     }
 
     @Override
     public List<WordFrequency> calculateMostFrequentNWords(String tekst, int aantal) {
         setFrequencyList(tekst);
-//
-//        lijst.stream().forEach(o -> {
-//            System.out.println("word: " + o.getWord());
-//            System.out.println("frenquency: " + o.getFrequency());
-//        });
+
+//        lijst.stream()
+//                .sorted(Comparator.comparingInt())
 
         return null;
     }
 
     private void setFrequencyList(String tekst) {
         ArrayList<String> woorden = createListFromText(tekst);
-        Map<String, Integer> freqMap = new TreeMap<>();
+        Map<String, Integer> freqMap = new HashMap<>();
 
         // get a list of unique words
         woorden.forEach(w -> freqMap.put(w, Collections.frequency(woorden, w)));
