@@ -6,7 +6,7 @@ public class Main {
 
         String tekst = """
                     Ordina understands the power of disruptive technologies /and cooperation in a digital ecosystems. 
-                    And we can #put ourselves in ** our customers’ shoes and in their digital business world. 
+                    And we can #put ourselves in ** our customers’ shoes and in their digital and business and world. 
                 """;
 
         WordFrequencyData count = new WordFrequencyData();

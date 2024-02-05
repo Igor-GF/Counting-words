@@ -9,6 +9,8 @@ public final class SingleWordFrequency implements WordFrequency {
         this.frequency = frequency;
     }
 
+
+
     public String getWord() {
         return word;
     }
