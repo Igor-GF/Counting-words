@@ -7,18 +7,11 @@ public class WordFrequencyData implements WordFrequencyAnalyzer {
 
     @Override
     public int calculateHighestFrequency(String tekst) {
-        ArrayList<String> woorden = createListFromText(tekst);
-        int frequency = 0;
+        setFrequencyList(tekst);
 
-        // get a list of unique words
-        Set<String> uniqueWords = new HashSet<>(woorden);
-
-        for (String w : uniqueWords) {
-            int f = Collections.frequency(woorden, w);
-            if (f > frequency) frequency = f;
-        }
-
-        return frequency;
+        return lijst.stream()
+                .mapToInt(SingleWordFrequency::getFrequency)
+                .reduce(0, Math::max);
     }
 
     @Override
@@ -30,11 +23,11 @@ public class WordFrequencyData implements WordFrequencyAnalyzer {
     @Override
     public List<WordFrequency> calculateMostFrequentNWords(String tekst, int aantal) {
         setFrequencyList(tekst);
-
-        lijst.stream().forEach(o -> {
-            System.out.println("word: " + o.getWord());
-            System.out.println("frenquency: " + o.getFrequency());
-        });
+//
+//        lijst.stream().forEach(o -> {
+//            System.out.println("word: " + o.getWord());
+//            System.out.println("frenquency: " + o.getFrequency());
+//        });
 
         return null;
     }

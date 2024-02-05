@@ -12,7 +12,8 @@ public class Main {
         WordFrequencyData count = new WordFrequencyData();
         int i = count.calculateHighestFrequency(tekst);
         int in = count.calculateFrequencyForWord(tekst, "in");
-        count.calculateMostFrequentNWords(tekst, 1);
+        System.out.println(count.calculateHighestFrequency(tekst));
+
 //        System.out.println(i);
 //        System.out.println("in: " + in);
     }
