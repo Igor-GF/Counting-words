@@ -1,10 +1,10 @@
 package nl.igf.tekst;
 
-public final class singleWordFrequency implements WordFrequency {
+public final class SingleWordFrequency implements WordFrequency {
     private String word;
     private int frequency;
 
-    public singleWordFrequency(String word, int frequency) {
+    public SingleWordFrequency(String word, int frequency) {
         this.word = word;
         this.frequency = frequency;
     }
