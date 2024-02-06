@@ -29,17 +29,16 @@ public class WordFrequencyData implements WordFrequencyAnalyzer {
     }
 
     @Override
-    public List<SingleWordFrequency> calculateMostFrequentNWords(String tekst, int aantal) {
+    public List<WordFrequency> calculateMostFrequentNWords(String tekst, int aantal) {
         setFrequencyList(tekst);
 
-        List<SingleWordFrequency> sortedList = lijst.stream()
+        return lijst.stream()
                 .sorted(Comparator
                         .comparingInt(WordFrequency::getFrequency).reversed()
                         .thenComparing(WordFrequency::getWord))
                 .limit(aantal)
+                .map(wf -> (WordFrequency) wf)// only for casting
                 .toList();
-
-        return sortedList;
     }
 
     private void setFrequencyList(String tekst) {

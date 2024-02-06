@@ -12,7 +12,7 @@ public class TestCode {
         WordFrequencyData count = new WordFrequencyData();
         int hf = count.calculateHighestFrequency(tekst);
         int wf = count.calculateFrequencyForWord(tekst, "digital");
-        List<SingleWordFrequency> sortedList = count.calculateMostFrequentNWords(tekst, 4);
+        List<WordFrequency> sortedList = count.calculateMostFrequentNWords(tekst, 4);
 
         System.out.println("Method: Highest frequency: " + hf);
         System.out.println("Method: Frequency for a word: " + wf);
