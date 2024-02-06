@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/counting-words.iml" filepath="$PROJECT_DIR$/counting-words.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java-counting-words.iml" filepath="$PROJECT_DIR$/Java-counting-words.iml" />
     </modules>
   </component>
 </project>
