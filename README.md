@@ -3,6 +3,8 @@ The App is aimed to split a given text into words, also excluding all symbols, s
 The words are converted to lowercase so that their frequency can be counted no matter the case of the characters (case insensitive).
 Every other character, besides letters, is not considered as part of a word but as a separator.
 
+Link to version 2 JEE: https://github.com/Igor-GF/JEE-counting-words
+
 ## Technologies
 - Java 
 
