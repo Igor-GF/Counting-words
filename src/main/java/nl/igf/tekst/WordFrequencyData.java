@@ -3,7 +3,7 @@ package nl.igf.tekst;
 import java.util.*;
 
 public class WordFrequencyData implements WordFrequencyAnalyzer {
-    private final ArrayList<SingleWordFrequency> lijst = new ArrayList<>();
+    private final List<SingleWordFrequency> lijst = new ArrayList<>();
 
     @Override
     public int calculateHighestFrequency(String tekst) {
@@ -29,12 +29,17 @@ public class WordFrequencyData implements WordFrequencyAnalyzer {
     }
 
     @Override
-    public List<WordFrequency> calculateMostFrequentNWords(String tekst, int aantal) {
+    public List<SingleWordFrequency> calculateMostFrequentNWords(String tekst, int aantal) {
         setFrequencyList(tekst);
 
+        List<SingleWordFrequency> sortedList = lijst.stream()
+                .sorted(Comparator
+                        .comparingInt(WordFrequency::getFrequency).reversed()
+                        .thenComparing(WordFrequency::getWord))
+                .limit(aantal)
+                .toList();
 
-
-        return null;
+        return sortedList;
     }
 
     private void setFrequencyList(String tekst) {
@@ -44,6 +49,8 @@ public class WordFrequencyData implements WordFrequencyAnalyzer {
         // get a list of unique words
         woorden.forEach(w -> freqMap.put(w, Collections.frequency(woorden, w)));
 
+        // add to lijst field
+        lijst.clear();
         for (Map.Entry<String, Integer> entry : freqMap.entrySet()) {
             lijst.add(new SingleWordFrequency(
                     entry.getKey(),

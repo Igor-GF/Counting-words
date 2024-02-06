@@ -11,5 +11,5 @@ public interface WordFrequencyAnalyzer {
     int calculateFrequencyForWord(String tekst, String woord);
 
     // returns n most frequent words in lower case -> alphabetical order
-    List<WordFrequency> calculateMostFrequentNWords (String tekst, int n);
+    List<SingleWordFrequency> calculateMostFrequentNWords (String tekst, int n);
 }

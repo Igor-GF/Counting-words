@@ -9,13 +9,16 @@ public final class SingleWordFrequency implements WordFrequency {
         this.frequency = frequency;
     }
 
-
-
     public String getWord() {
         return word;
     }
 
     public int getFrequency() {
         return frequency;
+    }
+
+    @Override
+    public String toString() {
+        return "{ \"" + word + "\", " + frequency + " }";
     }
 }
