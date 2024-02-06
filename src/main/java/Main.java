@@ -10,11 +10,11 @@ public class Main {
                 """;
 
         WordFrequencyData count = new WordFrequencyData();
-        int i = count.calculateHighestFrequency(tekst);
-        int in = count.calculateFrequencyForWord(tekst, "in");
-        System.out.println(count.calculateHighestFrequency(tekst));
+        int hf = count.calculateHighestFrequency(tekst);
+        int wf = count.calculateFrequencyForWord(tekst, "digital");
 
-//        System.out.println(i);
+        System.out.println("Highest frequency: " + hf);
+        System.out.println("Frequency for a word: " + wf);
 //        System.out.println("in: " + in);
     }
 }
