@@ -1,6 +1,6 @@
 package nl.igf.text;
 
-public final class WordFrequencyImpl implements WordFrequency, Comparable<WordFrequencyImpl> {
+public class WordFrequencyImpl implements WordFrequency, Comparable<WordFrequencyImpl> {
     private String word;
     private int frequency;
 

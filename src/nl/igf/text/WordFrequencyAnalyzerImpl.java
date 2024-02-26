@@ -40,8 +40,8 @@ public class WordFrequencyAnalyzerImpl implements WordFrequencyAnalyzer {
         wordFrequencySet = (TreeSet<WordFrequencyImpl>) wordFrequencySet.descendingSet();
     }
 
-    private ArrayList<String> createListFromText(String tekst) {
-        String[] wordArray = tekst.toLowerCase().trim().split("[^a-z]+");
+    private ArrayList<String> createListFromText(String text) {
+        String[] wordArray = text.toLowerCase().trim().split("[^a-z]+");
         return new ArrayList<>(Arrays.asList(wordArray));
     }
 }
