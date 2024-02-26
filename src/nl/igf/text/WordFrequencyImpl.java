@@ -25,7 +25,6 @@ public final class WordFrequencyImpl implements WordFrequency, Comparable<WordFr
      *          0 if this wordFrequency has the same word as "that"
      *          1 if this wordFrequency is 'greater' than "that"
      */
-
     @Override
     public int compareTo(WordFrequencyImpl that) {
         //if the words are equal we must return 0 to prevent duplicate words in the set
